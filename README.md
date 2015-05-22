@@ -12,7 +12,7 @@ Describe el objetivo y el funcionamiento de una aplicación con arquitectura sim
 
 Dada la base de datos mysql adjunta, construye un prototipo funcional que implemente una aplicación con una serie de widgets
 
-Cada widget es un elemento independiente que mediante javascript obtiene su información de una API REST JSON implementada en el framework python-flask o similar. Para implementar los widgets puedes utilizar jquery y el framework javascript Angular o otro equivalente que te acomode. Para HTML y CSS puede ser bootstrap o otro equivalente.
+Cada widget es un elemento independiente que mediante javascript obtiene su información de una API REST JSON implementada en el framework Django. Para implementar los widgets puedes utilizar javascript y el framework Angular o otro equivalente que te acomode. Para HTML y CSS puede ser bootstrap o otro equivalente de tu gusto.
 
 Implementa los siguientes APIs + widgets:
 
@@ -53,7 +53,6 @@ Tienes 3 días para desarrollar, comitea lo más seguido posible para ver tu ava
 Los criterios de evaluación (de 1 a 10) serán los siguientes:
 
 - Acabado general, como se ve y funciona desde el cliente
-- Backend: funcionalidad, calidad y buenas práticas
-- Frontend: funcionalidad, calidad y buenas práticas
+- Backend: funcionalidad, calidad y buenas prácticas
+- Frontend: funcionalidad, calidad y buenas prácticas
 - Orden y lectura del código en general
-
