@@ -26,7 +26,7 @@ Este widget contiene todas las campañas de la base de datos.
 
 <h3>3) Gráfico de impacto</h3>
 
-Este widget gráfica el impacto diario de cada campaña. Puedes usar hightcharts o equivalente.
+Este widget gráfica el impacto diario de todas las campañas. Puedes usar hightcharts o equivalente.
 
 <h3>4) Fecha</h3>
 
