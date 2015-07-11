@@ -1,12 +1,14 @@
 <h2>Introducción</h2>
 
-Admetricks captura campañas publicitarias de los principales medios de cada país, procesa esta información identificando quién y cuánto realiza la campaña, realiza filtros relevantes y entrega reportes de inteligencia para sus clientes que acceden a ellos a través de una plataforma web. El trabajo se enfocará en esta última parte, la plataforma que entrega los reportes. 
+Admetricks captura campañas publicitarias de los principales medios de cada país, procesa esta información identificando quién y cuánto realiza la campaña, realiza filtros relevantes y entrega reportes de inteligencia para sus clientes que acceden a ellos a través de una plataforma web. El trabajo se enfocará en esta última parte, la plataforma que entrega los reportes.
 
 Esta plataforma utiliza las siguientes tecnologías. Primero la información se encuentra en tablas resúmenes en una base de datos mysql. Luego información es obtenida por una aplicación “backend” escrita en python usando el framework flask que expone una API REST JSON. Finalmente el cliente interactúa con una capa “frontend” de widgets Javascript creados a partir de angularJS.
 
 <h2>Primera parte: portafolio</h2>
 
 Describe el objetivo y el funcionamiento de una aplicación con arquitectura similar que hayas creado. Particularmente que exponga una API REST JSON consumida por una aplicación de una página Javascript. Adjunta screenshots y pedazos de código (o pseudocódigo) relevantes y que muestren soluciones elegantes a sub-problemas.
+
+Dicho portafolio se encuenta en el <a href="https://github.com/pdelsol/admetricks-test-dennis/wiki/Portafolio">wiki</a> de este repositorio 
 
 <h2>Segunda parte: prototipo</h2>
 
