@@ -10,7 +10,7 @@ class Campaign(models.Model):
 
     date = models.DateField(db_column='fecha')
     advisor = models.CharField(max_length=255, db_column='avisador')
-    campaign = models.Charfield(max_length=255, db_column='campana')
+    campaign = models.CharField(max_length=255, db_column='campanya')
     media = models.CharField(max_length=255, db_column='medio')
     impact = models.IntegerField(db_column='impacto')
     banner = models.URLField(max_length=255)
