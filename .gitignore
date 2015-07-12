@@ -54,3 +54,6 @@ coverage.xml
 
 # PyBuilder
 target/
+
+#virtualenv configuration
+admetricks-test/
