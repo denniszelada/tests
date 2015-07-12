@@ -105,7 +105,7 @@ USE_TZ = True
 #Tastypie
 #http://tastypieapi.org
 TASTYPIE_ALLOW_MISSING_SLASH = True
-
+TASTYPIE_DEFAULT_FORMATS = ['json']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
