@@ -14,6 +14,7 @@ class CampaignSummaryResource(Resource):
     class Meta:
         resource_name = 'campaign'
         allowed_methods = ['get']
+        include_resource_uri = False
 
     """
     Overwritten method
