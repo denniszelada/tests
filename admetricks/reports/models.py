@@ -1,6 +1,6 @@
 from django.db import models
 
-class CampaignSumarry(object):
+class CampaignSummary(object):
     def __init__(self, initial=None):
         self.__dict__['_data'] = {}
 
