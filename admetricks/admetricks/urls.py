@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from tastypie.api import Api
-from reports.resources import CampaignResource
+from reports.resources import CampaignSummaryResource
 
 api = Api(api_name='v1')
-api.register(CampaignResource())
+api.register(CampaignSummaryResource())
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
