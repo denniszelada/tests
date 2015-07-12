@@ -5,7 +5,7 @@ from tastypie.test import ResourceTestCase
 class CampaignResourceTest(ResourceTestCase):
     fixtures = ['test-campaigns.json']
 
-    def setup(self):
+    def setUp(self):
         super(CampaignResourceTest, self).setUp()
 
         self.campaign = Campaign.objects.get(id=1)
