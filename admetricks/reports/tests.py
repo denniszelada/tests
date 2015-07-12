@@ -43,7 +43,7 @@ class CampaignResourceTest(ResourceTestCase):
         object_list = self.deserialize(resp)
         self.assertEqual(len(object_list['objects']), 20)
         self.assertEqual(len(object_list),2)
-        self.assertKeys(object_list['objects'][0],['resource_uri','impact', 'campaign','media','advisor','date','banner'])
+        self.assertKeys(object_list['objects'][0],['impact', 'campaign','media','advisor','date','banner'])
 
     def test_get_detail_json(self):
         resp = self.api_client.get(self.detail_url, format='json')
