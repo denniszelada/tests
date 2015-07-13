@@ -27,7 +27,7 @@ class CampaignResource(Resource):
         params = bundle.request.GET
         objects = Campaign.objects
         if 'date' in params:
-            date = datetime.datetime.strptime(params['date'], '%d%m%Y').date()
+            date = datetime.datetime.strptime(params['date'], '%d-%m-%Y').date()
             objects = objects.filter(date= str(date))
         return objects
 
