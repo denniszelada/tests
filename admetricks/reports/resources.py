@@ -4,6 +4,26 @@ from models import Campaign, CampaignSummary
 from sets import Set
 from utils import CampaignResource
 
+class MediaResource(CampaignResource):
+    media = fields.CharField(attribute='media')
+    campaigns = fields.IntegerField(attribute='campaigns')
+
+    class Meta:
+        resource_name = 'media'
+        detail_allowed_methods = []
+        include_resource_uri = False
+
+    """
+    Overwritten method
+    This allows to get the complete list of campaigns summaries.
+    to accomplish the challenge goals
+    """
+    def obj_get_list(self, bundle, **kwargs):
+        object_list = self.get_object_list(bundle, **kwargs)
+        object_list = object_list.values('media').annotate(campaigns=Count('campaign'))
+        return self.wrap_data(object_list)
+
+
 class AdvisorsRecource(CampaignResource):
     advisor = fields.CharField(attribute='advisor')
     campaigns = fields.IntegerField(attribute='campaigns')
@@ -43,7 +63,7 @@ class CampaignSummaryResource(CampaignResource):
     """
     def obj_get_list(self, bundle, **kwargs):
         object_list = self.get_object_list(bundle, **kwargs)
-        object_list = object_list.values('advisor', 'date','campaign').annotate(impact=Sum('impact'))
+        object_list = object_list.order_by('-date').values('advisor', 'date','campaign').annotate(impact=Sum('impact'))
         return self.wrap_data(object_list)
 
     """
