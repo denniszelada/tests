@@ -13,6 +13,13 @@ class CampaignSummary(object):
     def __setattr__(self, name):
         self.__dict__['_data'][name] = value
 
+    def __getitem__(self, index):
+        return self._data.get(index, None)
+
+    def __setitem__(self, index, value):
+        self.__dict__['_data'][index] = value
+
+        
     def to_dict(self):
         return self._data
 

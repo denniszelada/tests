@@ -3,6 +3,57 @@ from tastypie import fields
 from models import Campaign, CampaignSummary
 from sets import Set
 from utils import CampaignResource
+import random
+
+class ChartResource(CampaignResource):
+    label = fields.CharField(attribute='campaign', null=True)
+    fillColor = fields.CharField(attribute='fillColor', default='rgba(162, 162, 162, 0.53)')
+    strokeColor = fields.CharField(attribute='strokeColor', default="#bebebe")
+    pointColor = fields.CharField(attribute='pointColor', default="#bebebe")
+    pointStrokeColor = fields.CharField(attribute='pointStrokeColor', default='#bebebe')
+    pointHighlightFill = fields.CharField(attribute='pointHighlightFill',null=True)
+    pointHighlightStroke = fields.CharField(attribute='pointHighlightStroke',null=True)
+    data = fields.ListField(null=True, attribute='data')
+
+    def __init__(self, api_name=None):
+        self.labels = Set()
+        self.colors = ['#e91e63', '#1e88e5', '#26a69a','#ff5722', '#ffc107', '#f44336']
+        super(ChartResource, self).__init__(api_name)
+
+    class Meta:
+        resource_name = 'chart'
+        include_resource_uri = False
+        detail_allowed_methods = []
+
+    def obj_get_list(self, bundle, **kwargs):
+        object_list = self.get_object_list(bundle, **kwargs)
+        # Gets the list of available dates
+        dates = object_list.values('date').distinct()
+        self.labels = self.wrap_dictionary(dates, 'date')
+
+        #Gets the list of available campaigns
+        objects = object_list.values('campaign').distinct()
+        objects = self.wrap_data(objects)
+
+        for label in self.labels:
+            for obj in objects:
+                if not obj['data']:
+                    obj['data'] = []
+
+                value = object_list.filter(date=label, campaign=obj['campaign']).aggregate(impact = Sum('impact'))
+                obj['data'].append(value['impact'] or 0)
+                color = random.choice(self.colors)
+                obj['pointHighlightFill'] = color
+                obj['pointHighlightStroke'] = color
+
+        return objects
+
+    def alter_list_data_to_serialize(self, request, data):
+        objects = data['objects']
+        altered_data = {'labels':self.labels, 'datasets':objects}
+        data['objects'] = altered_data
+        return data
+
 
 class MediaResource(CampaignResource):
     media = fields.CharField(attribute='media')
@@ -81,20 +132,6 @@ class CampaignSummaryResource(CampaignResource):
         return self.wrap_dictionary(banners, 'banner')
 
    
-    """
-    Converts a list of dictionaries into a list, by
-    searching the key given
-    """
-    def wrap_dictionary(self, data, key):
-        wrapped = Set()
-        results = []
-        for (k,v) in enumerate(data):
-            result = v[key]
-            if not result in wrapped:
-                results.append(v[key])
-                wrapped.add(result)
-        return results
-
     """
     Filters and gets the given values with the given objects
     """
