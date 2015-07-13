@@ -1,4 +1,38 @@
-ign",
+[
+{
+    "fields": {
+        "impact": 1495,
+        "campaign": "Autoexperto",
+        "media": "Diarios En Red",
+        "advisor": "Auto Experto",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_c8035337ac598011f304a5df97e213dd.jpeg"
+    },
+    "model": "reports.campaign",
+    "pk": 1
+},
+{
+    "fields": {
+        "impact": 26649,
+        "campaign": "Autoexperto",
+        "media": "La Naci\u00f3n",
+        "advisor": "Auto Experto",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_97843ead2b06e33490d57b6a9b081048.jpeg"
+    },
+    "model": "reports.campaign",
+    "pk": 2
+},
+{
+    "fields": {
+        "impact": 23,
+        "campaign": "Autoexperto",
+        "media": "Marca",
+        "advisor": "Auto Experto",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_97843ead2b06e33490d57b6a9b081048.jpeg"
+    },
+    "model": "reports.campaign",
     "pk": 3
 },
 {
@@ -8,343 +42,343 @@ ign",
         "media": "Emol",
         "advisor": "Autolocal",
         "date": "2014-12-25",
-"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_3d4f0b6dadb82cd5588db1e636c14cd0.gif"
-},
-"model": "reports.campaign",
-"pk": 4
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_3d4f0b6dadb82cd5588db1e636c14cd0.gif"
+    },
+    "model": "reports.campaign",
+    "pk": 4
 },
 {
     "fields": {
-	"impact": 1817636,
-	"campaign": "Cotiza aqu\u00ed el modelo que buscas | Autolocal.com",
-	"media": "Soy Chile",
-	"advisor": "Autolocal",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_df7070db3e0000b7475e3cc252e6f221.swf"
+        "impact": 1817636,
+        "campaign": "Cotiza aqu\u00ed el modelo que buscas | Autolocal.com",
+        "media": "Soy Chile",
+        "advisor": "Autolocal",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_df7070db3e0000b7475e3cc252e6f221.swf"
     },
     "model": "reports.campaign",
     "pk": 5
 },
 {
     "fields": {
-	"impact": 17062,
-	"campaign": "Ford Ranger XLT LIMITED 2.5L 4x2 2013 Nuevo | Autolocal.com",
-	"media": "Soy Chile",
-	"advisor": "Autolocal",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e91b089f3be7f16f4b480a758d2e5e01.jpeg"
+        "impact": 17062,
+        "campaign": "Ford Ranger XLT LIMITED 2.5L 4x2 2013 Nuevo | Autolocal.com",
+        "media": "Soy Chile",
+        "advisor": "Autolocal",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e91b089f3be7f16f4b480a758d2e5e01.jpeg"
     },
     "model": "reports.campaign",
     "pk": 6
 },
 {
     "fields": {
-	"impact": 150328,
-	"campaign": "ZNA Succe Nuevo | Autolocal.com",
-	"media": "Soy Chile",
-	"advisor": "Autolocal",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_f33f7e52faba5b82c355c0410442ed07.jpeg"
+        "impact": 150328,
+        "campaign": "ZNA Succe Nuevo | Autolocal.com",
+        "media": "Soy Chile",
+        "advisor": "Autolocal",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_f33f7e52faba5b82c355c0410442ed07.jpeg"
     },
     "model": "reports.campaign",
     "pk": 7
 },
 {
     "fields": {
-	"impact": 126693,
-	"campaign": "ZX Grand Tiger dcab 2.2 2011 Usado | Autolocal.com",
-	"media": "Soy Chile",
-	"advisor": "Autolocal",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_ffbc1c641b51bc097f8c80699422eccb.jpeg"
+        "impact": 126693,
+        "campaign": "ZX Grand Tiger dcab 2.2 2011 Usado | Autolocal.com",
+        "media": "Soy Chile",
+        "advisor": "Autolocal",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_ffbc1c641b51bc097f8c80699422eccb.jpeg"
     },
     "model": "reports.campaign",
     "pk": 8
 },
 {
     "fields": {
-	"impact": 897,
-	"campaign": "Los Andes",
-	"media": "Destacados",
-	"advisor": "Automotriz Los Andes",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_f17457deec79c59298eb208b9b3e0164.swf"
+        "impact": 897,
+        "campaign": "Los Andes",
+        "media": "Destacados",
+        "advisor": "Automotriz Los Andes",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_f17457deec79c59298eb208b9b3e0164.swf"
     },
     "model": "reports.campaign",
     "pk": 9
 },
 {
     "fields": {
-	"impact": 15298,
-	"campaign": "Autos Usados",
-	"media": "Destacados",
-	"advisor": "Autos usados Chile",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_71b2c4dc3a635b74550b1d3ab01c5990.swf"
+        "impact": 15298,
+        "campaign": "Autos Usados",
+        "media": "Destacados",
+        "advisor": "Autos usados Chile",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_71b2c4dc3a635b74550b1d3ab01c5990.swf"
     },
     "model": "reports.campaign",
     "pk": 10
 },
 {
     "fields": {
-	"impact": 30585,
-	"campaign": "Carmeister: Destacados usados premiun",
-	"media": "Destacados",
-	"advisor": "Carmeister",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_a64f8733e7077d4003db715f67f575a1.swf"
+        "impact": 30585,
+        "campaign": "Carmeister: Destacados usados premiun",
+        "media": "Destacados",
+        "advisor": "Carmeister",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_a64f8733e7077d4003db715f67f575a1.swf"
     },
     "model": "reports.campaign",
     "pk": 11
 },
 {
     "fields": {
-	"impact": 95,
-	"campaign": "Chevrolet Sitio Oficial | Autos, SUV, Camionetas, 4X4, Pick Up, Camiones y Autos Familiares",
-	"media": "Auto Local",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_4e5491a255e7f0daf684bce256acaf49.jpeg"
+        "impact": 95,
+        "campaign": "Chevrolet Sitio Oficial | Autos, SUV, Camionetas, 4X4, Pick Up, Camiones y Autos Familiares",
+        "media": "Auto Local",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_4e5491a255e7f0daf684bce256acaf49.jpeg"
     },
     "model": "reports.campaign",
     "pk": 12
 },
 {
     "fields": {
-	"impact": 52453,
-	"campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
-	"media": "Publimetro",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d60804b54f6ce5a30828430585cf3f21.swf"
+        "impact": 52453,
+        "campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
+        "media": "Publimetro",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d60804b54f6ce5a30828430585cf3f21.swf"
     },
     "model": "reports.campaign",
     "pk": 13
 },
 {
     "fields": {
-	"impact": 11806,
-	"campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
-	"media": "Revista Mujeres",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d60804b54f6ce5a30828430585cf3f21.swf"
+        "impact": 11806,
+        "campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
+        "media": "Revista Mujeres",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d60804b54f6ce5a30828430585cf3f21.swf"
     },
     "model": "reports.campaign",
     "pk": 14
 },
 {
     "fields": {
-	"impact": 3174,
-	"campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
-	"media": "VTR Discovery Mujer",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_bac92f4f9c5bc178da6e0243a89438a8.jpeg"
+        "impact": 3174,
+        "campaign": "Especial Mujer Chevrolet | Cliente Chevrolet",
+        "media": "VTR Discovery Mujer",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_bac92f4f9c5bc178da6e0243a89438a8.jpeg"
     },
     "model": "reports.campaign",
     "pk": 15
 },
 {
     "fields": {
-	"impact": 21062,
-	"campaign": "Oportunidades | Financiamiento Chevrolet",
-	"media": "El Gr\u00e1fico",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_c2d2f79c33cae05a85d57a064ea98e98.swf"
+        "impact": 21062,
+        "campaign": "Oportunidades | Financiamiento Chevrolet",
+        "media": "El Gr\u00e1fico",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_c2d2f79c33cae05a85d57a064ea98e98.swf"
     },
     "model": "reports.campaign",
     "pk": 16
 },
 {
     "fields": {
-	"impact": 53757,
-	"campaign": "Oportunidades | Financiamiento Chevrolet",
-	"media": "El Mostrador",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e9bdbab9881acee2800f9fbaf3627bf9.jpeg"
+        "impact": 53757,
+        "campaign": "Oportunidades | Financiamiento Chevrolet",
+        "media": "El Mostrador",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e9bdbab9881acee2800f9fbaf3627bf9.jpeg"
     },
     "model": "reports.campaign",
     "pk": 17
 },
 {
     "fields": {
-	"impact": 483872,
-	"campaign": "Oportunidades | Financiamiento Chevrolet",
-	"media": "Mi Voz",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e803e74282d200bdd26b75f9fcc9ba0a.swf"
+        "impact": 483872,
+        "campaign": "Oportunidades | Financiamiento Chevrolet",
+        "media": "Mi Voz",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_e803e74282d200bdd26b75f9fcc9ba0a.swf"
     },
     "model": "reports.campaign",
     "pk": 18
 },
 {
     "fields": {
-	"impact": 12677,
-	"campaign": "Oportunidades | Financiamiento Chevrolet",
-	"media": "Publimetro",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_c2d2f79c33cae05a85d57a064ea98e98.swf"
+        "impact": 12677,
+        "campaign": "Oportunidades | Financiamiento Chevrolet",
+        "media": "Publimetro",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_c2d2f79c33cae05a85d57a064ea98e98.swf"
     },
     "model": "reports.campaign",
     "pk": 19
 },
 {
     "fields": {
-	"impact": 15021,
-	"campaign": "Oportunidades | Financiamiento Chevrolet",
-	"media": "Sitios.cl",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_ac2228a8a0d129f018467f67ce11c0ab.jpeg"
+        "impact": 15021,
+        "campaign": "Oportunidades | Financiamiento Chevrolet",
+        "media": "Sitios.cl",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_ac2228a8a0d129f018467f67ce11c0ab.jpeg"
     },
     "model": "reports.campaign",
     "pk": 20
 },
 {
     "fields": {
-	"impact": 1791,
-	"campaign": "Tahoe | 4x4 de Lujo | Chevrolet",
-	"media": "Auto a la Venta",
-	"advisor": "Chevrolet",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_51a3bdec798a2892e00ce7a865af063b.jpeg"
+        "impact": 1791,
+        "campaign": "Tahoe | 4x4 de Lujo | Chevrolet",
+        "media": "Auto a la Venta",
+        "advisor": "Chevrolet",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_51a3bdec798a2892e00ce7a865af063b.jpeg"
     },
     "model": "reports.campaign",
     "pk": 21
 },
 {
     "fields": {
-	"impact": 21538,
-	"campaign": "Chileautos.cl: miles de veh\u00edculos nuevos y usados",
-	"media": "Estrategia",
-	"advisor": "Chileautos",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_7ebf49175fe1dc4eef64dd4b4d3c1321.swf"
+        "impact": 21538,
+        "campaign": "Chileautos.cl: miles de veh\u00edculos nuevos y usados",
+        "media": "Estrategia",
+        "advisor": "Chileautos",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_7ebf49175fe1dc4eef64dd4b4d3c1321.swf"
     },
     "model": "reports.campaign",
     "pk": 22
 },
 {
     "fields": {
-	"impact": 9530,
-	"campaign": "Concesionario Circulo Autos",
-	"media": "Diarios En Red",
-	"advisor": "C\u00edrculo Autos",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_68a66fd0eed67ac902f3cc35f2132303.gif"
+        "impact": 9530,
+        "campaign": "Concesionario Circulo Autos",
+        "media": "Diarios En Red",
+        "advisor": "C\u00edrculo Autos",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_68a66fd0eed67ac902f3cc35f2132303.gif"
     },
     "model": "reports.campaign",
     "pk": 23
 },
 {
     "fields": {
-	"impact": 105213,
-	"campaign": "Coseche - Chevrolet Chile - Opel Chile",
-	"media": "Soy Chile",
-	"advisor": "Coseche",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_2c6f15c489d5baa258d0e8a249846c0e.jpeg"
+        "impact": 105213,
+        "campaign": "Coseche - Chevrolet Chile - Opel Chile",
+        "media": "Soy Chile",
+        "advisor": "Coseche",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_2c6f15c489d5baa258d0e8a249846c0e.jpeg"
     },
     "model": "reports.campaign",
     "pk": 24
 },
 {
     "fields": {
-	"impact": 551,
-	"campaign": "Veh\u00edculos Seminuevos | Concesionario Curifor",
-	"media": "deMotores",
-	"advisor": "Curifor",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_70fbc46343db7b1069dd30420ba2d9e9.swf"
+        "impact": 551,
+        "campaign": "Veh\u00edculos Seminuevos | Concesionario Curifor",
+        "media": "deMotores",
+        "advisor": "Curifor",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_70fbc46343db7b1069dd30420ba2d9e9.swf"
     },
     "model": "reports.campaign",
     "pk": 25
 },
 {
     "fields": {
-	"impact": 89,
-	"campaign": "Volkswagen Beetle - Daniel Achondo",
-	"media": "Auto Local",
-	"advisor": "Daniel Achondo",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_67a0756d3e14f702722bb8287248fd90.swf"
+        "impact": 89,
+        "campaign": "Volkswagen Beetle - Daniel Achondo",
+        "media": "Auto Local",
+        "advisor": "Daniel Achondo",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_67a0756d3e14f702722bb8287248fd90.swf"
     },
     "model": "reports.campaign",
     "pk": 26
 },
 {
     "fields": {
-	"impact": 3615,
-	"campaign": "Volkswagen Beetle - Daniel Achondo",
-	"media": "Destacados",
-	"advisor": "Daniel Achondo",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d9a8984f7d01879e0efad16fcf612ab5.swf"
+        "impact": 3615,
+        "campaign": "Volkswagen Beetle - Daniel Achondo",
+        "media": "Destacados",
+        "advisor": "Daniel Achondo",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_d9a8984f7d01879e0efad16fcf612ab5.swf"
     },
     "model": "reports.campaign",
     "pk": 27
 },
 {
     "fields": {
-	"impact": 294,
-	"campaign": "Volkswagen Golf - Daniel Achondo",
-	"media": "Auto Local",
-	"advisor": "Daniel Achondo",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_794e54104af72c7b9ebe9e6fc2d36bfe.swf"
+        "impact": 294,
+        "campaign": "Volkswagen Golf - Daniel Achondo",
+        "media": "Auto Local",
+        "advisor": "Daniel Achondo",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_794e54104af72c7b9ebe9e6fc2d36bfe.swf"
     },
     "model": "reports.campaign",
     "pk": 28
 },
 {
     "fields": {
-	"impact": 218748,
-	"campaign": "Autentificaci\u00f3n de Usuarios",
-	"media": "Cooperativa",
-	"advisor": "Derco",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_550a32872bba2cb0d570ef5ca671017e.swf"
+        "impact": 218748,
+        "campaign": "Autentificaci\u00f3n de Usuarios",
+        "media": "Cooperativa",
+        "advisor": "Derco",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_550a32872bba2cb0d570ef5ca671017e.swf"
     },
     "model": "reports.campaign",
     "pk": 29
 },
 {
     "fields": {
-	"impact": 3543,
-	"campaign": "Autentificaci\u00f3n de Usuarios",
-	"media": "Google",
-	"advisor": "Derco",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
+        "impact": 3543,
+        "campaign": "Autentificaci\u00f3n de Usuarios",
+        "media": "Google",
+        "advisor": "Derco",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
     },
     "model": "reports.campaign",
     "pk": 30
 },
 {
     "fields": {
-	"impact": 30,
-	"campaign": "Autentificaci\u00f3n de Usuarios",
-	"media": "Gu\u00eda Fitness",
-	"advisor": "Derco",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
+        "impact": 30,
+        "campaign": "Autentificaci\u00f3n de Usuarios",
+        "media": "Gu\u00eda Fitness",
+        "advisor": "Derco",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
     },
     "model": "reports.campaign",
     "pk": 31
 },
 {
     "fields": {
-	"impact": 6478,
-	"campaign": "Autentificaci\u00f3n de Usuarios",
-	"media": "lacopucha",
-	"advisor": "Derco",
-	"date": "2014-12-25",
-	"banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
+        "impact": 6478,
+        "campaign": "Autentificaci\u00f3n de Usuarios",
+        "media": "lacopucha",
+        "advisor": "Derco",
+        "date": "2014-12-25",
+        "banner": "http://11ffa.http.dal05.cdn.softlayer.net/admx_cl_ads/banner_84255906c6ae6df2a732a4f699e95435.swf"
     },
     "model": "reports.campaign",
     "pk": 32

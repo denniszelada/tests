@@ -10,7 +10,7 @@ class CampaignSummaryResource(Resource):
     impact = fields.IntegerField(attribute='impact')
     media = fields.ListField()
     banners = fields.ListField()
-    
+
     class Meta:
         resource_name = 'campaign'
         allowed_methods = ['get']
@@ -32,7 +32,7 @@ class CampaignSummaryResource(Resource):
         media = self.group_campaign(bundle.obj, 'media')
         return self.wrap_dictionary(media, 'media')
 
-     """
+    """
     Gets a list of banners, which are part of the campaign
     """
     def dehydrate_banners(self, bundle):
