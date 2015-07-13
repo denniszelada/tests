@@ -6,23 +6,24 @@ from models import Campaign, CampaignSummary
 class CampaignSummaryResource(Resource):
     advisor = fields.CharField(attribute='advisor')
     campaign = fields.CharField(attribute='campaign')
-    date = fields.DateField(attribute='date')
     impact = fields.IntegerField(attribute='impact')
     media = fields.ListField()
     banners = fields.ListField()
 
     class Meta:
-        resource_name = 'campaign'
+        resource_name = 'reports'
         allowed_methods = ['get']
         include_resource_uri = False
-
+        always_return_data = True
+        
     """
     Overwritten method
     This allows to get the complete list of campaigns summaries.
     to accomplish the challenge goals
     """
     def obj_get_list(self, bundle, **kwargs):
-        object_list = Campaign.objects.values('advisor', 'campaign', 'date').annotate(impact=Sum('impact'))
+        object_list = Campaign.objects.values('advisor', 'campaign').annotate(impact=Sum('impact'))
+        object_list = Campaign.objects.values('advisor', 'campaign').annotate(impact=Sum('impact'))
         return self.wrap_data(object_list)
 
     """
@@ -63,4 +64,4 @@ class CampaignSummaryResource(Resource):
     Filters and gets the given values with the given objects
     """
     def group_campaign(self,obj, *values):
-        return Campaign.objects.filter(campaign=obj.campaign, date=obj.date).values(*values)
+        return Campaign.objects.filter(campaign=obj.campaign).values(*values)
