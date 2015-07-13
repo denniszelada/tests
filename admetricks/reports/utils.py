@@ -29,6 +29,10 @@ class CampaignResource(Resource):
         if 'date' in params:
             date = datetime.datetime.strptime(params['date'], '%d-%m-%Y').date()
             objects = objects.filter(date= str(date))
+        if 'advisor' in params:
+            objects = objects.filter(advisor= params['advisor'])
+        if 'media' in params:
+            objects = objects.filter(media=params['media'])
         return objects
 
     """
