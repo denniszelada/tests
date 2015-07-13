@@ -39,8 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'tastypie',
     'djangular',
+    'corsheaders',
     'reports',
-    'corheaders',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,10 +112,9 @@ TASTYPIE_DEFAULT_FORMATS = ['json']
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'static')
+STATIC_ROOT = ''
 STATICFILE_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'public'),
+    os.path.join(BASE_DIR, 'assets'),
 )
 
 STATICFILES_FINDERS = [
