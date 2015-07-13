@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from tastypie.api import Api
-from reports.resources import CampaignSummaryResource
+from reports.resources import CampaignSummaryResource, AdvisorResource
 
 api = Api(api_name='v1')
+api.register(AdvisorResource())
 api.register(CampaignSummaryResource())
 
 urlpatterns = [
