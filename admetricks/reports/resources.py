@@ -4,20 +4,19 @@ from models import Campaign, CampaignSummary
 from sets import Set
 from utils import CampaignResource
 import random
-
 class ChartResource(CampaignResource):
     label = fields.CharField(attribute='campaign', null=True)
     fillColor = fields.CharField(attribute='fillColor', default='rgba(162, 162, 162, 0.53)')
     strokeColor = fields.CharField(attribute='strokeColor', default="#bebebe")
     pointColor = fields.CharField(attribute='pointColor', default="#bebebe")
     pointStrokeColor = fields.CharField(attribute='pointStrokeColor', default='#bebebe')
-    pointHighlightFill = fields.CharField(attribute='pointHighlightFill',null=True)
     pointHighlightStroke = fields.CharField(attribute='pointHighlightStroke',null=True)
     data = fields.ListField(null=True, attribute='data')
 
     def __init__(self, api_name=None):
         self.labels = Set()
-        self.colors = ['#e91e63', '#1e88e5', '#26a69a','#ff5722', '#ffc107', '#f44336']
+        self.colors = ['rgba(233, 30, 99, 0.65)', 'rgba(30, 136, 229, 0.65)', 'rgba(38, 166, 154, 0.65)',
+        'rgba(255, 87, 34, 0.65)', 'rgba(255, 193, 7, 0.65)', 'rgba(247, 39, 24, 0.65)']
         super(ChartResource, self).__init__(api_name)
 
     class Meta:
@@ -45,6 +44,9 @@ class ChartResource(CampaignResource):
                 color = random.choice(self.colors)
                 obj['pointHighlightFill'] = color
                 obj['pointHighlightStroke'] = color
+                obj['strokeColor'] = color
+                obj['fillColor'] = color
+                obj['pointColor'] = color
 
         return objects
 
@@ -74,8 +76,7 @@ class MediaResource(CampaignResource):
         object_list = object_list.values('media').annotate(campaigns=Count('campaign'))
         return self.wrap_data(object_list)
 
-
-class AdvisorsRecource(CampaignResource):
+class AdvisorsResource(CampaignResource):
     advisor = fields.CharField(attribute='advisor')
     campaigns = fields.IntegerField(attribute='campaigns')
 
@@ -92,7 +93,7 @@ class AdvisorsRecource(CampaignResource):
         object_list = self.get_object_list(bundle, **kwargs)
         object_list = object_list.values('advisor').annotate(campaigns=Count('campaign'))
         return self.wrap_data(object_list)
-    
+
 class CampaignSummaryResource(CampaignResource):
     advisor = fields.CharField(attribute='advisor')
     campaign = fields.CharField(attribute='campaign')
@@ -106,7 +107,6 @@ class CampaignSummaryResource(CampaignResource):
         detail_allowed_methods = []
         include_resource_uri = False
 
-        
     """
     Overwritten method
     This allows to get the complete list of campaigns summaries.
@@ -131,7 +131,6 @@ class CampaignSummaryResource(CampaignResource):
         banners = self.group_campaign(bundle.obj,'banner')
         return self.wrap_dictionary(banners, 'banner')
 
-   
     """
     Filters and gets the given values with the given objects
     """
