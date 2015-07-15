@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('frontendApp', [
     'ngAnimate',
     'ngCookies',
@@ -21,15 +21,14 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'MainController',
         controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+  app.factory('campaigns',['$http',function($http){
+    return $http.get('http://localhost:8000/api/v1/reports?limit=12', {headers:{'Accept':'application/json'}});
+  }]);

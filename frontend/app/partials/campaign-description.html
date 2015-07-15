@@ -1,0 +1,11 @@
+<article ng-style="{'background-image':'url({{detail.banners[0]}})'}">
+   <div>
+     <h3>{{detail.campaign }}</h3>
+     <span><em>{{detail.advisor }}</em></span>
+     <span><em>{{detail.impact }}</em></span>
+   </div>
+   <h5>Publicado en</h5>
+   <div ng-repeat="media in detail.media">
+     <span><b>{{ media }}</b><span>
+   </div>
+ </article>
