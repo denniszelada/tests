@@ -1,0 +1,27 @@
+<div class="row">
+  <section>
+    Fecha
+    <div class="input-group">
+      <datepicker date-format="dd-MM-yyyy">
+        <input type="text" ng-model="date" class="form-control" ng-change="loadAdvisors()">
+      </datepicker>
+    </div>
+  </section>
+  <section ng-hide="advisors.length === 1">
+    Anunciante
+    <div class="input-group">
+      <select class="form-control" placeholder="Fecha de la campaña" ng-model="advisor" ng-options="advi.advisor for advi in advisors" ng-change="loadMedia()"></select>
+      <span class="input-group-btn" ng-hide="advisor === ''"><button type="button" class="btn btn-link" ng-click="cleanData(2)"><span class="glyphicon glyphicon-remove"></span></button></span>
+    </div>
+  </section>
+  <section ng-hide="media.length === 1">
+    Medios
+    <div class="input-group">
+      <select class="form-control" ng-model="med" ng-options="med.media for med in media" ng-change="filtersUpdated()"></select>
+      <span class="input-group-btn" ng-hide="med === ''"><button type="button" class="btn btn-link" ng-click="cleanData(3)"><span class="glyphicon glyphicon-remove"></span></button></span>
+    </div>
+  </section>
+  <div class="input-group">
+    <input class="btn btn-info form-control" type="button" value="Limpiar Filtros" ng-click="cleanAll()">
+  </div>
+</div>
