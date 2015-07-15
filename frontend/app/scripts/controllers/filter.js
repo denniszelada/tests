@@ -78,14 +78,16 @@ app.controller('FilterController', ['$scope','campaigns',function($scope, campai
     data.filtersUpdated(false);
   };
 
-  $scope.cleanDate = function(partial=true){
+  $scope.cleanDate = function(partial){
+    partial = partial !== false;
     data.date= '';
     if(partial){
       data.filtersUpdated();
     }
   };
 
-  $scope.cleanAdvisors = function(partial=true){
+  $scope.cleanAdvisors = function(partial){
+    partial = partial !== false;
     data.advisor= '';
 
     if(partial){
@@ -97,7 +99,8 @@ app.controller('FilterController', ['$scope','campaigns',function($scope, campai
     }
   };
 
-  $scope.cleanMedia = function(partial=true){
+  $scope.cleanMedia = function(partial){
+    partial = partial !== false;
     data.med = '';
     if(!partial){
       data.media = [''];
