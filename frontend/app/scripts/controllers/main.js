@@ -14,23 +14,27 @@ angular.module('frontendApp')
       'AngularJS',
       'Karma'
     ];
-  });
-  var root_uri= '/api/v1/reports?limit=15';
-  $scope.campaigns = [];
-  $scope.page = {};
-  $scope.blah = {};
+    var root_uri= '/api/v1/campaigns?limit=15';
+    $scope.campaigns = [];
+    $scope.page = {};
+    $scope.blah = {};
 
-  $scope.setData = function(response){
-    $scope.campaigns = response.data.objects;
-    $scope.page = response.data.meta;
-    console.log('Ok!!!' + response.status);
-  };
+    $scope.$on('filters-updated', function(event, filters){
+      $scope.paginate(root_uri+'&'+filters);
+    });
 
-  $scope.handleError = function(error){
-     $scope.blah = error;
-     console.error('Error!!!' + error);
-   };
-   $scope.paginate= function(uri){
+    $scope.setData = function(response){
+      $scope.campaigns = response.data.objects;
+      $scope.page = response.data.meta;
+      console.log('yeeeeey!!!' + response.status);
+    };
+
+    $scope.handleError = function(error){
+      $scope.blah = error;
+      console.error('Noooo!!! ' + error);
+    };
+
+    $scope.paginate= function(uri){
       campaigns.fetch(uri, $scope.setData, $scope.handleError);
     };
 

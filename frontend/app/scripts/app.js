@@ -11,11 +11,8 @@
 var app = angular
   .module('frontendApp', [
     'ngAnimate',
-    'ngCookies',
-    'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    '720kb.datepicker'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -23,5 +23,20 @@
       <campaign-description detail="campaign"></campaign-description>
     </div>
   </div>
+  <div class="col-lg-3" ng-controller="FilterController">
+      <div class="row">
+        Fecha
+        <div class="input-group">
+          <datepicker date-format="dd-MM-yyyy">
+            <input type="text" ng-model="date" class="form-control" ng-change="loadAdvisors()">
+          </datepicker>
+        </div>
+        <div class="input-group" ng-hide="advisors.length === 0">
+          Advisor
+          <select class="form-control" ng-model="advisor" ng-options="advi.advisor for advi in advisors">
 
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
