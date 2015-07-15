@@ -1,27 +1,22 @@
 'use strict';
-var today = function(){
-  var date = new Date();
-  return [date.getDate(), date.getMonth(), date.getFullYear()].join('-');
-};
-
 var app = angular.module('frontendApp');
 app.controller('FilterController', ['$scope','campaigns',function($scope, campaigns){
   var data = $scope;
-  data.date= today();
+  data.date= '';
   data.advisor= '';
-  data.advisors = [];
+  data.advisors = [''];
   data.med = '';
-  data.media = [];
+  data.media = [''];
   data.page = {};
 
   $scope.setAdvisors = function(response){
-    data.advisors = response.data.objects;
+    data.advisors = data.advisors.concat(response.data.objects);
     data.page = response.data.meta;
     console.log('yeeeeey!!!' + response.status);
   };
 
   $scope.setMedia = function(response){
-    data.media = response.data.objects;
+    data.media = data.media.concat(response.data.objects);
     data.page = response.data.meta;
     console.log('yeeeeey!!!' + response.status);
   };
@@ -32,9 +27,15 @@ app.controller('FilterController', ['$scope','campaigns',function($scope, campai
   };
 
   $scope.createfilters = function(){
-    var filter='date='+data.date;
+    var filter='';
+    if((data.date!=='')){
+      filter = filter + 'date='+data.date;
+    }
     if(data.advisor !== ''){
       filter = filter + '&advisor='+ data.advisor.advisor;
+    }
+    if(data.med !== ''){
+      filter = filter + '&media='+data.med.media;
     }
     return filter;
   };
@@ -53,5 +54,54 @@ app.controller('FilterController', ['$scope','campaigns',function($scope, campai
   $scope.filtersUpdated = function(){
     var filters = $scope.createfilters();
     $scope.$emit('filters-updated',filters);
-   };
+  };
+
+  $scope.cleanData = function(filterLevel){
+    switch(filterLevel){
+      case 3:
+        data.cleanMedia();
+        break;
+      case 2:
+        data.cleanAdvisors();
+        break;
+      case 1:
+        data.cleanDate();
+        break;
+    }
+    data.filtersUpdated();
+  };
+
+  $scope.cleanAll = function(){
+    data.cleanMedia(false);
+    data.cleanAdvisors(false);
+    data.cleanDate(false);
+    data.filtersUpdated(false);
+  };
+
+  $scope.cleanDate = function(partial=true){
+    data.date= '';
+    if(partial){
+      data.filtersUpdated();
+    }
+  };
+
+  $scope.cleanAdvisors = function(partial=true){
+    data.advisor= '';
+
+    if(partial){
+      data.cleanMedia(false);
+      data.filtersUpdated();
+    }
+    else{
+      data.advisors = [''];
+    }
+  };
+
+  $scope.cleanMedia = function(partial=true){
+    data.med = '';
+    if(!partial){
+      data.media = [''];
+    }
+    data.filtersUpdated();
+  };
 }]);

@@ -6,6 +6,10 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
+ .jumbotron{
+   text-align: center;
+   background-color: white;
+ }
  .nav a:hover {
    color: #0087d2;
  }

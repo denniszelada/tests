@@ -2,42 +2,38 @@
   <div class="headerwrap">
     <h1><span class="glyphicon glyphicon-bell"></span> Todas las campañas </h1>
   </div>
-   <div class="col-lg-8">
-     <nav>
-       <ul class="pager">
-         <li class="previous" ng-class="{disabled:!page.previous}">
-           <a ng-click="paginate(page.previous)">
-             <span aria-hidden="true"><span aria-hidden="true">&larr;</span>Anterior</span>
-           </a>
-         </li>
-         <li class="next" ng-class="{disabled:!page.next}">
-           <a ng-click="paginate(page.next)">
-             <span aria-hidden="true">Siguiente<span aria-hidden="true">&rarr;</span></span>
-           </a>
-         </li>
-       </ul>
-     </nav>
-   </div>
-   <div class="col-lg-8">
-   <div class="col-lg-4" ng-repeat="campaign in campaigns">
+  <div class="col-lg-8">
+    <nav>
+      <ul class="pager">
+        <li class="previous" ng-class="{disabled:!page.previous}">
+          <a ng-click="paginate(page.previous)">
+            <span aria-hidden="true"><span aria-hidden="true">&larr;</span>Anterior</span>
+          </a>
+        </li>
+        <li class="next" ng-class="{disabled:!page.next}">
+          <a ng-click="paginate(page.next)">
+            <span aria-hidden="true">Siguiente<span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-lg-8">
+      <div class="jumbotron" ng-show="campaigns.length === 0">
+        <div class="container">
+          <h1><b>Lo sentimos mucho</b></h1>
+          <p>
+            No pudimos encontrar información que
+            cumpla esos filtros.
+          </p>
+          <h1><b><span class="glyphicon glyphicon-cloud"></span></b></h1>
+        </div>
+      </div>
+    <div class="col-lg-4" ng-repeat="campaign in campaigns">
       <campaign-description detail="campaign"></campaign-description>
     </div>
   </div>
   <div class="col-lg-3" ng-controller="FilterController">
-      <div class="row">
-        Fecha
-        <div class="input-group">
-          <datepicker date-format="dd-MM-yyyy">
-            <input type="text" ng-model="date" class="form-control" ng-change="loadAdvisors()">
-          </datepicker>
-        </div>
-        <div class="input-group" ng-hide="advisors.length === 0">
-          Anunciante
-          <select class="form-control" ng-model="advisor" ng-options="advi.advisor for advi in advisors" ng-change="loadMedia()"></select>
-        </div>
-        <div class="input-group" ng-hide="media.length === 0">
-          Medios
-          <select class="form-control" ng-model="med" ng-options="med.media for med in media" ng-change="filtersUpdated()"></select>
-      </div>
-    </div>
+    <filter-manager></filter-manager>
+  </div>
 </div>
