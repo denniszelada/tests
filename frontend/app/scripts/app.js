@@ -29,6 +29,10 @@ var app = angular
       });
   });
 
-  app.factory('campaigns',['$http',function($http){
-    return $http.get('http://localhost:8000/api/v1/reports?limit=12', {headers:{'Accept':'application/json'}});
+  app.service('campaigns',['$http',function($http){
+      return {fetch: function(uri, success, error){
+        $http.get('http://localhost:8000' + uri, {headers:{'Accept':'application/json'}}).then(
+          success, error
+        );
+      }};
   }]);

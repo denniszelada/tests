@@ -1,11 +1,22 @@
-<article ng-style="{'background-image':'url({{detail.banners[0]}})'}">
-   <div>
-     <h3>{{detail.campaign }}</h3>
-     <span><em>{{detail.advisor }}</em></span>
-     <span><em>{{detail.impact }}</em></span>
-   </div>
-   <h5>Publicado en</h5>
-   <div ng-repeat="media in detail.media">
-     <span><b>{{ media }}</b><span>
-   </div>
- </article>
+<article class="card">
+  <h5><b>{{detail.advisor }}</b></h5>
+  <div class="banner" ng-style="{'background-image':'url({{firstBanner()}})'}">
+    <div class="overlay">
+      <span class="impact centered"><b>{{detail.impact|number }}</b></span>
+    </div>
+  </div>
+    <div ng-controller="TabController as tab">
+      <ul class="nav nav-stuff">
+        <li ng-class="{ active:tab.isSet(1)}"><a ng-click="tab.setTab(1)"> General</a></li>
+        <li ng-class="{ active:tab.isSet(2)}"><a ng-click="tab.setTab(2)"> Medios </a></li>
+      </ul>
+      <div class="info" ng-show="tab.isSet(1)">
+        <h5><b>Campaña:</b></h5><span class="info-text">{{detail.campaign }}</span>
+      </div>
+      <div clas="info" ng-show="tab.isSet(2)">
+        <h5><b>Publicado en</b></h5>
+        <span class="info-text" ng-repeat="medium in detail.media">{{medium}} {{$last ? '' : ', '}} </span>
+      </div>
+    </div>
+  </div>
+</article>

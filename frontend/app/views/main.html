@@ -1,8 +1,25 @@
-<h1 ng-show="blah === null"> Nooooo {{ blah }}</h1>
-<h2 class="fancy-tittle"> <b>Todas las campañas</b></h2>
 <div class="row">
-  <div class="col-lg-8 card">
-    <div ng-repeat="campaign in campaigns">
+  <div class="headerwrap">
+    <h1><span class="glyphicon glyphicon-bell"></span> Todas las campañas </h1>
+  </div>
+   <div class="col-lg-8">
+     <nav>
+       <ul class="pager">
+         <li class="previous" ng-class="{disabled:!page.previous}">
+           <a ng-click="paginate(page.previous)">
+             <span aria-hidden="true"><span aria-hidden="true">&larr;</span>Anterior</span>
+           </a>
+         </li>
+         <li class="next" ng-class="{disabled:!page.next}">
+           <a ng-click="paginate(page.next)">
+             <span aria-hidden="true">Siguiente<span aria-hidden="true">&rarr;</span></span>
+           </a>
+         </li>
+       </ul>
+     </nav>
+   </div>
+   <div class="col-lg-8">
+   <div class="col-lg-4" ng-repeat="campaign in campaigns">
       <campaign-description detail="campaign"></campaign-description>
     </div>
   </div>

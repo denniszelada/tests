@@ -7,5 +7,6 @@ directive('campaignDescription', function(){
       detail: '='
     },
     templateUrl: 'partials/campaign-description.html',
+    controller: 'CampaignController'
   };
 });
