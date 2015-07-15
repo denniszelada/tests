@@ -32,11 +32,12 @@
           </datepicker>
         </div>
         <div class="input-group" ng-hide="advisors.length === 0">
-          Advisor
-          <select class="form-control" ng-model="advisor" ng-options="advi.advisor for advi in advisors">
-
-          </select>
+          Anunciante
+          <select class="form-control" ng-model="advisor" ng-options="advi.advisor for advi in advisors" ng-change="loadMedia()"></select>
         </div>
+        <div class="input-group" ng-hide="media.length === 0">
+          Medios
+          <select class="form-control" ng-model="med" ng-options="med.media for med in media" ng-change="filtersUpdated()"></select>
       </div>
     </div>
 </div>
