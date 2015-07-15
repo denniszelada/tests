@@ -1,3 +1,19 @@
-<div class="headerwrap">
+<div class="headerwrap canvas-container">
   <h1><span class="glyphicon glyphicon-bell"></span> Todas las campañas </h1>
+  <div class="col-lg-10">
+    <canvas id="mainChart" width="1200" height="300" ng-hide="chart.data.datasets.length===0"></canvas>
+  </div>
+  <div class="col-lg-2" id="series">
+    <a class="btn btn-link" ng-click="chart.paginate(chart.page.previous)" ng-class="{disabled:!chart.page.previous}">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="btn btn-link" ng-class="{disabled:!chart.page.next}" ng-click="chart.paginate(chart.page.next)">
+      <span class="glyphicon glyphicon-chevron-right">
+    </a>
+    <ul>
+      <li ng-repeat="serie in chart.data.datasets">
+        <span class="badge" ng-style="{'background-color':'{{serie.fillColor}}'}">  </span> <small>{{serie.label|limitTo: 20}}</small>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,39 +1,39 @@
-<div class="row">
-  <div class="headerwrap">
-    <h1><span class="glyphicon glyphicon-bell"></span> Todas las campañas </h1>
-  </div>
-  <div class="col-lg-8">
-    <nav>
-      <ul class="pager">
-        <li class="previous" ng-class="{disabled:!page.previous}">
-          <a ng-click="paginate(page.previous)">
-            <span aria-hidden="true"><span aria-hidden="true">&larr;</span>Anterior</span>
-          </a>
-        </li>
-        <li class="next" ng-class="{disabled:!page.next}">
-          <a ng-click="paginate(page.next)">
-            <span aria-hidden="true">Siguiente<span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="col-lg-8">
-      <div class="jumbotron" ng-show="main.campaigns.length === 0">
-        <div class="container">
-          <h1><b>Lo sentimos mucho</b></h1>
-          <p>
-            No pudimos encontrar información que
-            cumpla esos filtros.
-          </p>
-          <h1><b><span class="glyphicon glyphicon-cloud"></span></b></h1>
+<div>
+  <chart></chart>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div  class="nav navbar-nav navbar-card">
+          <div class="navbar-form navbar-right" role="navigation">
+            <a class="btn btn-link" ng-click="main.paginate(main.page.previous)" ng-class="{disabled:!main.page.previous}">
+              <span aria-hidden="true"><span class="glyphicon glyphicon-chevron-left"></span>Anterior</span>
+            </a>
+            <a class="btn btn-link" ng-class="{disabled:!main.page.next}" ng-click="main.paginate(main.page.next)">
+              <span aria-hidden="true">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></span>
+            </a>
+          </div>
         </div>
       </div>
-    <div class="col-lg-4" ng-repeat="campaign in campaigns">
-      <campaign-description detail="campaign"></campaign-description>
     </div>
-  </div>
-  <div class="col-lg-3" ng-controller="FilterController">
-    <filter-manager></filter-manager>
+    <div class="row">
+      <div class="col-lg-8">
+          <div class="jumbotron" ng-show="main.campaigns.length === 0">
+            <div class="container">
+              <h1><b>Lo sentimos mucho</b></h1>
+              <p>
+                No pudimos encontrar información que
+                cumpla esos filtros.
+              </p>
+              <h1><b><span class="glyphicon glyphicon-cloud"></span></b></h1>
+            </div>
+          </div>
+        <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4" ng-repeat="campaign in main.campaigns">
+          <campaign-description detail="campaign" class="load-card"></campaign-description>
+        </div>
+      </div>
+      <div class="col-lg-3" ng-controller="FilterController" data-spy="affix" data-offset-top="400">
+          <filter-manager></filter-manager>
+      </div>
+    </div>
   </div>
 </div>

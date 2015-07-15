@@ -26,10 +26,18 @@ var app = angular
       });
   });
 
-  app.service('campaigns',['$http',function($http){
-      return {fetch: function(uri, success, error){
-        $http.get('http://localhost:8000' + uri, {headers:{'Accept':'application/json'}}).then(
-          success, error
-        );
-      }};
-  }]);
+app.factory('campaigns',['$http',function($http){
+    return {fetch: function(uri, success, error){
+      $http.get('http://localhost:8000' + uri, {headers:{'Accept':'application/json'}}).then(
+        success, error
+      );
+    }};
+}]);
+
+app.factory('charts',['$http',function($http){
+    return {fetch: function(uri, success, error){
+      $http.get('http://localhost:8000' + uri, {headers:{'Accept':'application/json'}}).then(
+        success, error
+      );
+    }};
+}]);

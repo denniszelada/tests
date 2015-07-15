@@ -15,30 +15,31 @@ angular.module('frontendApp')
       'Karma'
     ];
     var root_uri= '/api/v1/campaigns?limit=15';
-    $scope.campaigns = [];
-    $scope.page = {};
-    $scope.blah = {};
+    var  campaign = this;
+    this.campaigns = [];
+    this.page = {};
+    this.blah = {};
 
     $scope.$on('filters-updated', function(event, filters){
-      $scope.paginate(root_uri+'&'+filters);
+      campaign.paginate(root_uri+'&'+filters);
     });
 
-    $scope.setData = function(response){
-      $scope.campaigns = response.data.objects;
-      $scope.page = response.data.meta;
+    this.setData = function(response){
+      campaign.campaigns = response.data.objects;
+      campaign.page = response.data.meta;
       console.log('yeeeeey!!!' + response.status);
     };
 
-    $scope.handleError = function(error){
-      $scope.blah = error;
+    this.handleError = function(error){
+      campaign.blah = error;
       console.error('Noooo!!! ' + error);
     };
 
-    $scope.paginate= function(uri){
-      campaigns.fetch(uri, $scope.setData, $scope.handleError);
+    this.paginate= function(uri){
+      campaigns.fetch(uri, campaign.setData, campaign.handleError);
     };
 
-    campaigns.fetch(root_uri, $scope.setData, $scope.handleError);
+    campaigns.fetch(root_uri,campaign.setData,campaign.handleError);
   }])
   .controller('TabController',function(){
     this.tab = 1;

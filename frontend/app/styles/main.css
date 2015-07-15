@@ -6,9 +6,33 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
- .jumbotron{
+ .canvas-overlay{
+   position: absolute;
+ }
+
+#series{
+  top: 5px;
+  font-size: 15px;
+}
+
+#series ul > li{
+  list-style: none;
+}
+.jumbotron{
    text-align: center;
    background-color: white;
+
+ }
+ .jumbotron, .card, .form-control, .navbar-default, .headerwrap{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ }
+ .navbar-card{
+   height: 45px;
+   margin: 10px 15px 10px 15px;
+   width: 97.5%;
+ }
+ #headerwrap{
+   box-shadow: 0 4px 5px rgba(0,0,0,0.35), 0 4px 5px rgba(0,0,0,0.25);
  }
  .nav a:hover {
    color: #0087d2;
@@ -24,6 +48,7 @@
 .filter{
   margin-top: 10px;
 }
+
 .nav-stuff{
   margin-top: 10px;
 }
@@ -76,21 +101,18 @@
    padding-top: 55px;
 
  }
-
- .ng-invalid{
-   border-color: #f52d2d;
- }
-
- input.form-control{
-   margin: 5px auto;
- }
+.ng-invalid{
+  border-color: #f52d2d;
+}
+input.form-control{
+  margin: 5px auto;
+}
  .card.info{
    max-height: 300px;
    border-color: #989898;
    border-width: thin;
  }
 .card{
-   box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
    background-color: white;
    height: 300px;
    margin-top: 10px;
@@ -173,7 +195,6 @@ a:after {
 .navbar-default {
 	background-color: white;
 	border-color: transparent;
-  border-bottom-color: #d4d4d4;
 }
 
 .navbar-default .navbar-brand {
@@ -206,12 +227,12 @@ i {
 /* HeaderWrap */
 .headerwrap {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	background-color: #0288d1;
+	background-color: #f4f4f4;
 	padding-top:10px;
   margin-bottom: 5px;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 20vh;
+	min-height: 350px;
     background-size: 100%;
     background-size: cover;
   margin-left: 0px;
@@ -220,7 +241,7 @@ i {
 
 .headerwrap h1 {
 	margin-bottom: 30px;
-	color: white;
+	color: #f06292;
 	font-size: 1.5em;
 	font-weight: 300;
 	letter-spacing: 1px;
