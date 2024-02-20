@@ -3,7 +3,8 @@ from tastypie import fields
 from models import Campaign, CampaignSummary
 from sets import Set
 from utils import CampaignResource
-import random
+import secrets
+
 class ChartResource(CampaignResource):
     label = fields.CharField(attribute='campaign', null=True)
     fillColor = fields.CharField(attribute='fillColor', default='rgba(162, 162, 162, 0.53)')
@@ -41,7 +42,7 @@ class ChartResource(CampaignResource):
 
                 value = object_list.filter(date=label, campaign=obj['campaign']).aggregate(impact = Sum('impact'))
                 obj['data'].append(value['impact'] or 0)
-                color = random.choice(self.colors)
+                color = secrets.SystemRandom().choice(self.colors)
                 obj['pointHighlightFill'] = color
                 obj['pointHighlightStroke'] = color
                 obj['strokeColor'] = color
