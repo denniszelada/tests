@@ -39,7 +39,8 @@ class CampaignResource(Resource):
     """
     Converts a group of flat data into serializable objects
     """
-    def wrap_data(self, data=[]):
+    def wrap_data(self, data=None):
+        data = [] if data is None else data
         results = []
         for result in data:
             new_obj = CampaignSummary(initial=result)
