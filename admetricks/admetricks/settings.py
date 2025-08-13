@@ -125,3 +125,4 @@ STATICFILES_FINDERS = [
 # CORS django headers
 # https://github.com/ottoyiu/django-cors-headers
 CORS_ORIGIN_ALLOW_ALL = True
+SESSION_COOKIE_SECURE = True
